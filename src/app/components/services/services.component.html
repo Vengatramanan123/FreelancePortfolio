@@ -1,0 +1,32 @@
+<section id="services" class="services-section py-24 px-6">
+  <div class="max-w-6xl mx-auto">
+    <!-- Section Header -->
+    <div class="mb-16">
+      <span class="text-sm uppercase tracking-wider font-mono text-primary mb-4 block">Services</span>
+      <h2 class="text-4xl lg:text-5xl font-syne font-bold text-text-primary">
+        What I build for you
+      </h2>
+    </div>
+    
+    <!-- Services Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      @for (service of services; track service.title) {
+        <div class="service-card p-8 md:p-10 rounded-2xl bg-card border border-border hover:border-primary transition-all duration-300">
+          <h3 class="text-2xl font-syne font-bold text-text-primary mb-4">
+            {{ service.title }}
+          </h3>
+          <p class="text-text-muted mb-6">
+            {{ service.description }}
+          </p>
+          <div class="flex flex-wrap gap-2">
+            @for (tag of service.tags; track tag) {
+              <span class="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
+                {{ tag }}
+              </span>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

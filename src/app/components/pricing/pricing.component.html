@@ -1,0 +1,66 @@
+<section id="pricing" class="pricing-section py-24 px-6 bg-surface/30">
+  <div class="max-w-4xl mx-auto">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <span class="text-sm uppercase tracking-wider font-mono text-primary mb-4 block">Pricing</span>
+      <h2 class="text-4xl lg:text-5xl font-syne font-bold text-text-primary">
+        Simple, transparent pricing
+      </h2>
+      <p class="text-text-muted mt-4 text-lg">
+        Choose the plan that fits your project needs
+      </p>
+    </div>
+
+    <!-- Pricing Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      @for (plan of plans; track plan.name)
+      { <div
+        class="pricing-card relative p-8 md:p-10 rounded-2xl border transition-all duration-300 h-full flex flex-col"
+        [class.popular]="plan.isPopular" [class.border-primary]="plan.isPopular"
+        [class.border-border]="!plan.isPopular">
+        <!-- Popular Badge -->
+        @if (plan.isPopular)
+        { <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+          <span class="bg-primary text-background px-4 py-1 rounded-full text-sm font-semibold">
+            Most Popular </span>
+        </div> } <!-- Card Header -->
+        <div class="mb-6 pt-4">
+          <h3 class="text-2xl font-syne font-bold text-text-primary mb-2">
+            {{ plan.name }} </h3>
+          <p class="text-text-muted text-sm">
+            {{ plan.description }} </p>
+        </div>
+        <!-- Price -->
+        <div class="mb-6 pb-6 border-b border-border">
+          <div class="flex items-baseline gap-2">
+            <span class="text-4xl font-syne font-bold text-primary">
+              {{ plan.currency }}{{ plan.price.toLocaleString('en-IN') }} </span>
+            <span class="text-text-muted">/project</span>
+          </div>
+        </div>
+        <!-- Features -->
+        <ul class="space-y-3 mb-8 flex-grow">
+          @for (feature of plan.features; track feature)
+          { <li class="flex gap-3 text-text-muted">
+            <span class="text-success font-bold flex-shrink-0">✓</span>
+            <span>{{ feature }}</span>
+          </li> } </ul>
+        <!-- CTA Button -->
+        <button class="w-full py-3 rounded-lg font-semibold transition-all duration-300 mt-auto"
+          [class.bg-primary]="plan.isPopular" [class.text-white]="plan.isPopular" [class.border]="!plan.isPopular"
+          [class.border-primary]="!plan.isPopular" [class.text-primary]="!plan.isPopular"
+          [class.hover:bg-primary/90]="plan.isPopular" 
+          onclick="window.open('https://forms.gle/mgwn5uSGvk6DfxzK7', '_blank')">
+          {{ plan.cta }} </button>
+      </div> }
+    </div>
+
+    <!-- Custom Solution Link -->
+    <div class="text-center mt-12">
+      <p class="text-text-muted mb-4">Need a custom solution?</p>
+      <a href="#contact" class="text-primary hover:text-secondary font-semibold transition">
+        Let's discuss your requirements →
+      </a>
+    </div>
+  </div>
+</section>

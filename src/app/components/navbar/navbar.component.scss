@@ -1,0 +1,22 @@
+:host {
+  display: block;
+}
+
+nav {
+  background: rgba(17, 22, 36, 0.8);
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #5B8AF0;
+  color: white;
+  border-radius: 0.75rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background-color: #6B9AFF;
+    transform: translateY(-2px);
+  }
+}

@@ -1,0 +1,13 @@
+:host {
+  display: block;
+}
+
+.footer-section {
+  background: linear-gradient(135deg, rgba(22, 29, 48, 0.8) 0%, rgba(17, 22, 36, 0.8) 100%);
+}
+
+@media (max-width: 768px) {
+  .footer-section {
+    text-align: center;
+  }
+}

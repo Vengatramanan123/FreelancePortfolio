@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ProFolio - Vengatramanan S | Full-Stack Developer</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Full-Stack Developer with 3+ years of experience building Angular & .NET web apps">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: '#0B0E17',
+            surface: '#111624',
+            card: '#161D30',
+            border: '#1E2840',
+            primary: '#5B8AF0',
+            secondary: '#A78BFA',
+            success: '#34D399',
+            'text-primary': '#E8EAF0',
+            'text-muted': '#6B7499',
+          },
+          fontFamily: {
+            syne: ['Syne', 'sans-serif'],
+            inter: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          backdropBlur: {
+            md: '12px',
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-background text-text-primary font-inter">
+  <app-root></app-root>
+</body>
+</html>

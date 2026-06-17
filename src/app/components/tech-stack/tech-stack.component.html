@@ -1,0 +1,14 @@
+<section class="tech-stack-section py-16 px-6 border-y border-border">
+  <div class="max-w-6xl mx-auto">
+    <p class="text-center text-text-muted text-sm mb-8 uppercase tracking-wider">Tech Stack</p>
+    
+    <!-- Tech Icons/Chips -->
+    <div class="flex flex-wrap justify-center gap-3">
+      @for (tech of technologies; track tech) {
+        <div class="px-4 py-2 rounded-full border border-border text-text-muted hover:border-primary hover:text-primary transition-all duration-300 text-sm font-medium">
+          {{ tech }}
+        </div>
+      }
+    </div>
+  </div>
+</section>

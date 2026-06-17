@@ -1,0 +1,27 @@
+:host {
+  display: block;
+}
+
+.contact-section {
+  background: linear-gradient(135deg, rgba(17, 22, 36, 0.8) 0%, rgba(22, 29, 48, 0.6) 100%);
+}
+
+.btn {
+  border-radius: 0.75rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  
+  &.btn-primary {
+    background-color: #5B8AF0;
+    color: white;
+    
+    &:hover {
+      background-color: #6B9AFF;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(91, 138, 240, 0.3);
+    }
+  }
+}
