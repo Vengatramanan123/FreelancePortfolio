@@ -12,7 +12,7 @@
     </div>
 
     <!-- Pricing Cards -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       @for (plan of plans; track plan.name)
       { <div
         class="pricing-card relative p-8 md:p-10 rounded-2xl border transition-all duration-300 h-full flex flex-col"
@@ -37,6 +37,8 @@
               {{ plan.currency }}{{ plan.price.toLocaleString('en-IN') }} </span>
             <span class="text-text-muted">/project</span>
           </div>
+          
+            <span class="text-text-muted text-sm">Price may vary based on user requirement</span>
         </div>
         <!-- Features -->
         <ul class="space-y-3 mb-8 flex-grow">

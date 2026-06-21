@@ -8,4 +8,18 @@ import { CommonModule } from '@angular/common';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
-export class NavbarComponent {}
+export class NavbarComponent {
+  isMenuOpen = false;
+
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu(): void {
+    this.isMenuOpen = false;
+  }
+
+  openContactForm(): void {
+    window.open('https://forms.gle/mgwn5uSGvk6DfxzK7', '_blank');
+  }
+}
